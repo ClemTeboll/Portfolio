@@ -1,0 +1,43 @@
+.projects {
+    @include display_space-between;
+    padding: 20px;
+    @include mobile-only() {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.content {
+    width: 300px;
+    background-color: $second-clr;
+    border: 1px solid $third-clr;
+    padding: 2%;
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 10px 10px 10px $shadow-clr;
+        transition: ease-in-out 1000ms;
+    }
+    & figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        opacity: 20%;
+        @include mobile-only() {
+            opacity: 100%;
+        }
+        &:hover {
+            opacity: 100%;
+            transition: 1000ms ease-in-out;
+        }
+    }
+    & img {
+        width: 200px;
+        height: auto;
+    }
+    @include mobile-only() {
+        margin-bottom: 20px;
+    }
+}

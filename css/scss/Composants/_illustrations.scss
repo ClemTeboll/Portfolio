@@ -1,0 +1,24 @@
+.illustration {
+    max-height: 400px;
+    max-width: 500px;
+    @include mobile-only() {
+        max-width: 300px;
+        max-height: 300px;
+    }
+    &:hover {
+        box-shadow: 10px 10px 10px $shadow-clr;
+    }
+}
+
+.arrow {
+    height: 50px;
+    &:hover {
+        transform: scale(2);
+        transition: transform 1000ms;
+    }
+}
+
+.books {
+    height: 200px;
+    width: auto;
+}

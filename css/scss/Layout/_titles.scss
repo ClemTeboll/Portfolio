@@ -1,0 +1,14 @@
+.main-title {
+    @include width-content;
+    height: 80px;
+    display: flex;
+    justify-content: center!important;
+    align-items: center;
+    text-align: center;
+    background-color: $first-clr;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include mobile-only() {
+        width: 100%;
+    }
+}

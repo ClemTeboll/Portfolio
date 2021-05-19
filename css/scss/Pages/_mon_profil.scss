@@ -1,0 +1,27 @@
+.my_profile {
+    @include display_space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+    & div {
+        width: 450px;
+        height: 110px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        @include mobile-only() {
+            width: 100%;
+        }
+        & h2 {
+            color: $first-clr!important;
+        }
+        &:hover {
+            border-top: 2px solid $first-clr;
+            border-bottom: 2px solid $first-clr;
+        }
+    }
+    
+    & a {
+        color: $third-clr;
+        text-decoration: none;
+    }
+}

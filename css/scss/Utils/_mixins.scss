@@ -1,0 +1,28 @@
+@mixin width-content {
+    width: 60vw;
+    min-width: 1000px;
+    margin: auto;
+}
+
+@mixin display_space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin display_center {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin opacity {
+    opacity: 20%;
+    &:hover {
+        opacity: 100%;
+    }
+}
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content
+    }
+};

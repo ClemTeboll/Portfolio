@@ -1,0 +1,53 @@
+.diplomas {
+    @include display_space-between;
+    padding: 5%;
+    height: auto;
+    & figcaption {
+        margin-top: 10px;
+    }
+    & figure {
+        margin-bottom: 30px;
+        & img {
+            width: 400px;
+            border: 1px solid $third-clr;
+            height: auto;
+            @include mobile-only() {
+                width: 100%;
+            }
+        }
+        & img:hover {
+            box-shadow: 10px 10px 10px $shadow-clr;
+            transform: scale(1.5);
+            transition: ease-in-out 1000ms;
+        }
+    }
+    &__p1 {
+        width: 50%;
+        padding-right: 5%;
+        @include mobile-only() {
+            width: 100%;
+        }
+        & a {
+            text-decoration: none;
+            color: $first-clr;
+            @include mobile-only() {
+                text-decoration: underline;
+                font-weight: normal;
+            }
+            &:hover {
+                text-decoration: underline;
+                font-weight: normal;
+            }
+        }
+    }
+    &__p2 {
+        width: 50%;
+        padding-left: 5%;
+        @include mobile-only() {
+            width: 100%;
+        }
+    }
+    @include mobile-only() {
+        flex-direction: column;
+    }
+}

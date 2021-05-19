@@ -1,0 +1,46 @@
+.all-skills {
+    @include display_space-between;
+    flex-wrap: wrap;
+}
+
+.category {
+    width: 270px;
+    background-color: $first-clr;
+    margin: 30px 30px 60px 30px;
+    &__content {
+        background-color: $second-clr;
+        @include display_center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+        padding: 20px;
+        border: 1px solid $third-clr;
+
+    }
+    &__title h2 {
+        color: $second-clr;
+        @include display_space-between;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+}
+
+.sk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills {
+    height: 40px;
+    width: auto;
+    margin: 0px 15px 15px 15px;
+    &:hover {
+        transform: scale(2) rotate(360deg);
+        transition: transform 1000ms;
+    }
+    &__comment {
+        text-align: center;
+    }
+}

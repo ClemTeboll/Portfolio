@@ -1,0 +1,38 @@
+.publications {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    @include mobile-only() {
+        flex-wrap: wrap-reverse;
+    }
+    &__img {
+        width: 200px;
+        @include mobile-only() {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__txt {
+        width: 450px;
+        @include mobile-only() {
+            width: 100%;
+        }
+    }
+}
+
+.books {
+    margin-bottom: 20px;
+    border: 1px solid $third-clr;
+    &:hover {
+        transform: scale(1.5);
+        transition: transform 1000ms;
+        box-shadow: 10px 10px 10px $shadow-clr;
+    }
+}
+
+.revue {
+    margin-bottom: 20px;
+}
