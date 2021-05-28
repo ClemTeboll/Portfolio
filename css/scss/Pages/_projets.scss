@@ -1,6 +1,7 @@
 .projects {
     @include display_space-between;
     padding: 20px;
+    flex-wrap: wrap;
     @include mobile-only() {
         flex-wrap: wrap;
         justify-content: center;
@@ -13,6 +14,7 @@
     background-color: $second-clr;
     border: 1px solid $third-clr;
     padding: 2%;
+    margin-bottom: 2%;
     &:hover {
         transform: scale(1.1);
         box-shadow: 10px 10px 10px $shadow-clr;
